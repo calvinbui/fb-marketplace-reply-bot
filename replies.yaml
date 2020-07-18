@@ -1,11 +1,11 @@
 ---
 
 replies:
-  - message:
+  - query:
       - "is this still available"
       - "is this available"
     response: "yes"
-  - message:
+  - query:
       - "(would|will) you (consider|do|take)"
       - "negotiable"
       - "\\d+ (pickup|pick up) today"
@@ -14,12 +14,12 @@ replies:
       - "would you go for \\d+"
       - "could it be cheaper"
     response: "no"
-  - message:
+  - query:
       - "(where is|where's) (pickup|pick up)"
       - "what area would pickup be"
       - "where can i (pickup|pick up)"
     response: "Liverpool"
-  - message:
+  - query:
       - "last price"
       - "final price"
     response: "the price listed"

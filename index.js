@@ -32,30 +32,21 @@ login(
         process.exit(1);
       }
 
-      // send reply
-      function sendReply(reply) {
-        console.log(
-          `Replying to ${message.body} with ${reply} to ${message.senderID}`
-        );
-        api.sendMessage({ body: reply }, message.threadID);
-      }
+      console.log(`Message received: ${message.body}`);
 
-      if (err) {
-        process.exit(1);
-      }
       // loop through replies array
       for (let reply = 0; reply < db.replies.length; reply++) {
         // loop through each reply's message
-        for (let message = 0; message < db.replies[reply].message.length; message++) {
+        for (let query = 0; query < db.replies[reply].query.length; query++) {
           // test if regex matches
           if (
             RegExp(
-              `(^|\\s)["']?${db.replies[reply].message[message]}[.!?]?["']?[,.]?(?!\\S)`,
+              `(^|\\s)["']?${db.replies[reply].message[query]}[.!?]?["']?[,.]?(?!\\S)`,
               "i"
             ).test(message.body)
           ) {
-            console.log(`Message received: ${message.body}`);
-            sendReply(db.replies[reply].response);
+            console.log(`Replying to ${message.body} with ${db.replies[reply].response} to ${message.senderID}`);
+            api.sendMessage({ body: db.replies[reply].response }, message.threadID);
             break;
           }
         }
