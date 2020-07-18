@@ -1,0 +1,25 @@
+---
+
+replies:
+  - message:
+      - "is this still available"
+      - "is this available"
+    response: "yes"
+  - message:
+      - "(would|will) you (consider|do|take)"
+      - "negotiable"
+      - "\\d+ (pickup|pick up) today"
+      - "willing to give it at \\d+"
+      - "\\d+ cash (pickup|pick up)"
+      - "would you go for \\d+"
+      - "could it be cheaper"
+    response: "no"
+  - message:
+      - "(where is|where's) (pickup|pick up)"
+      - "what area would pickup be"
+      - "where can i (pickup|pick up)"
+    response: "Liverpool"
+  - message:
+      - "last price"
+      - "final price"
+    response: "the price listed"

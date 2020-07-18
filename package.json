@@ -1,0 +1,23 @@
+{
+  "name": "fb-marketplace-reply-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvinbui/fb-marketplace-reply-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calvinbui/fb-marketplace-reply-bot/issues"
+  },
+  "homepage": "https://github.com/calvinbui/fb-marketplace-reply-bot#readme",
+  "dependencies": {
+    "facebook-chat-api": "github:Schmavery/facebook-chat-api",
+    "js-yaml": "^3.14.0"
+  }
+}
