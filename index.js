@@ -37,11 +37,11 @@ login(
       // loop through replies array
       for (let reply = 0; reply < db.replies.length; reply++) {
         // loop through each reply's message
-        for (let query = 0; query < db.replies[reply].query.length; query++) {
+        for (let query = 0; query < db.replies[reply].queries.length; query++) {
           // test if regex matches
           if (
             RegExp(
-              `(^|\\s)["']?${db.replies[reply].message[query]}[.!?]?["']?[,.]?(?!\\S)`,
+              `(^|\\s)["']?${db.replies[reply].queries[query]}[.!?]?["']?[,.]?(?!\\S)`,
               "i"
             ).test(message.body)
           ) {
