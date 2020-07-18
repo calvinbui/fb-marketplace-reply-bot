@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/calvinbui/fb-marketplace-reply-bot#readme",
   "dependencies": {
-    "facebook-chat-api": "github:Schmavery/facebook-chat-api",
+    "facebook-chat-api": "https://github.com/Schmavery/facebook-chat-api",
     "js-yaml": "^3.14.0"
   }
 }
