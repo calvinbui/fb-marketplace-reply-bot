@@ -1,4 +1,4 @@
-FROM node:v14.5.0-alpine
+FROM node:14.5.0-alpine
 WORKDIR /replybot
 COPY package*.json ./
 RUN npm install -g --production
